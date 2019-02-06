@@ -1,0 +1,23 @@
+buildscript {
+    ext.kotlin_version = '1.3.20'
+
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+afterEvaluate {
+    def v = "0.1.0-${System.currentTimeMillis()}"
+    allprojects {
+        version = v
+    }
+}
+
+subprojects {
+    repositories {
+        jcenter()
+    }
+}

@@ -1,0 +1,23 @@
+apply plugin: 'kotlin-multiplatform'
+apply plugin: 'maven-publish'
+
+kotlin {
+    jvm()
+//    linuxX64("linux")
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+                api project(':mpp-base')
+            }
+        }
+
+        jvmMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+            }
+        }
+
+    }
+}

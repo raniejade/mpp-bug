@@ -1,0 +1,24 @@
+apply plugin: 'kotlin-multiplatform'
+apply plugin: 'maven-publish'
+
+kotlin {
+    jvm()
+//    linuxX64('linux')
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+            }
+        }
+
+        jvmMain {
+            dependencies {
+                implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+            }
+        }
+
+    }
+}
+
+version = "0.1.0-${System.currentTimeMillis()}"

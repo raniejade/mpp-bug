@@ -1,0 +1,6 @@
+apply plugin: 'kotlin-platform-jvm'
+
+dependencies {
+    compile project(':mpp')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
