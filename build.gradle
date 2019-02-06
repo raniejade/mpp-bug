@@ -9,13 +9,6 @@ buildscript {
     }
 }
 
-afterEvaluate {
-    def v = "0.1.0-${System.currentTimeMillis()}"
-    allprojects {
-        version = v
-    }
-}
-
 subprojects {
     repositories {
         jcenter()
