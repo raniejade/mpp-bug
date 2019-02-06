@@ -9,6 +9,7 @@ kotlin {
         commonMain {
             dependencies {
                 implementation 'org.jetbrains.kotlin:kotlin-stdlib-common'
+                // switching to implementation make it work again
                 api project(':mpp-base')
             }
         }
